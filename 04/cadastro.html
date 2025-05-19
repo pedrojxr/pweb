@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <h1>Cadastro</h1>
+
+    <form action="https://qfqdkj.hospedagemelastica.com.br/pweb/salvar.jsp" method="POST">
+
+        Login: <br>
+        <input type="text" required name="login"> <br>
+
+        Senha: <br>
+        <input type="password" maxlength="10" name="senha"> <br>
+
+        Confirme a Senha: <br>
+        <input type="password" maxlength="10" name="confirmarSenha"> <br>
+
+        Nome: <br>
+        <input type="text" name="nome"> <br>
+
+        Sexo: <br>
+        <input type="radio" name="sexo" value="masculino">Masculino <br>
+        <input type="radio" name="sexo" value="feminino">Feminino <br>
+
+        Email: <br>
+        <input type="email" name="email"> <br>
+
+        Interesses: <br>
+        <input type="checkbox" name="interesses" value="futebol">Futebol <br>
+        <input type="checkbox" name="interesses" value="politica">Política <br>
+        <input type="checkbox" name="interesses" value="economia">Economia <br>
+        <input type="checkbox" name="interesses" value="carros">Carros <br>
+        <input type="checkbox" name="interesses" value="celebridades">Celebridades <br>
+
+        <br>
+        Estado: <br>
+        <select name="estado">
+            <option value="ma">Maranhão</option>
+            <option value="pi">Piauí</option>
+            <option value="ba">Bahia</option>
+            <option value="se">Sergipe</option>
+        </select> <br>
+
+        Observações:<br>
+        <textarea name="observacao" rows="4" cols="50"></textarea> <br>
+
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+
+</html>

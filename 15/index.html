@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Animação</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            margin: 0;
+            background-color: #f0f0f0; 
+        }
+
+        .box {
+            width: 150px; 
+            height: 150px;
+            background-color: red; 
+            animation: rotateAndChangeColor 10s linear infinite;
+        }
+        
+      
+        @keyframes rotateAndChangeColor {
+            0% {
+                transform: rotate(0deg);
+                background-color: red;
+            }
+            25% {
+                transform: rotate(90deg);
+                background-color: blue;
+            }
+            50% {
+                transform: rotate(180deg);
+                background-color: green;
+            }
+            75% {
+                transform: rotate(270deg);
+                background-color: purple;
+            }
+            100% {
+                transform: rotate(360deg);
+                background-color: red;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

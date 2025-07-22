@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente Radial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; 
+            padding: 0;
+        }
+
+        .radial-gradient-box {
+            width: 600px; 
+            height: 150px; 
+           
+            background: radial-gradient(ellipse at center,
+                red 0%,       
+                yellow 30%,    
+                lime 80%      
+            );
+            border: 1px solid #ccc; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="radial-gradient-box"></div>
+
+</body>
+</html>

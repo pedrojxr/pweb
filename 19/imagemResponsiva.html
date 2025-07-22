@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de Imagens com Bootstrap</title>
+    <link href="./bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+    <link href="./bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* A classe .img-formas não é mais necessária já que você não quer a imagem pequena */
+        /* .img-formas {
+            width: 150px;
+            height: auto;
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <div class="row">
+            
+            <div class="col-sm-6 order-sm-1">
+                <h1>Imagem Responsiva</h1>
+                <img src="img/uva1.png" class="img-fluid">
+            </div>
+
+            <div class="col-sm-6 order-sm-2">
+                <h1>Formas em Imagens</h1>
+                <img src="img/uva1.png" class="img-fluid"> 
+            </div>
+
+            <div class="col-sm-12 order-sm-3 mt-4"> 
+                <h1>Imagem Não Responsiva</h1>
+                <img src="img/uva2.png"> 
+            </div>
+            
+        </div>
+    </div>
+
+
+</body>
+</html>

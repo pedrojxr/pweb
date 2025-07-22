@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6A6EEB;
+            --primary-dark: #4F52D4; 
+            --background-light: #F4F6F9; 
+            --background-dark: #E2E6EC; 
+            --text-color: #343A40; 
+            --border-color: #DCDFE3; 
+            --shadow-light: rgba(0, 0, 0, 0.06); 
+            --shadow-medium: rgba(0, 0, 0, 0.12); 
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            box-sizing: border-box; 
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.8em;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px var(--shadow-light);
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-bottom: 5px solid var(--primary-color); 
+            border-radius: 15px; 
+            box-shadow: 0 8px 25px var(--shadow-light); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .links-container:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 30px var(--shadow-medium); 
+        }
+
+        .caixa {
+            padding: 20px;
+            background-color: var(--background-dark);
+            border: 1px solid var(--border-color); 
+            border-radius: 10px; 
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 3px 10px var(--shadow-light);
+        }
+
+        .caixa:hover {
+            background-color: #d8dee6; 
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px var(--shadow-medium);
+        }
+
+        .caixa p {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .caixa a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700; 
+            transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
+            display: inline-block; 
+            padding: 5px 10px; 
+            border-radius: 5px;
+            font-size: 1.3em; }
+
+        .caixa a:hover {
+            text-decoration: none;
+            color: #ffffff; 
+            background-color: var(--primary-dark);
+            transform: scale(1.03); 
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+                margin-bottom: 30px;
+            }
+
+            .links-container {
+                padding: 25px;
+                max-width: 90%;
+            }
+
+            .caixa {
+                padding: 18px;
+            }
+
+            .caixa a {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Atividades de CSS</h1>
+
+    <div class="links-container">
+        <div class="caixa">
+            <p><a target="_blank" href="./atividade.html">Atividade</a></p>
+        </div>
+
+        <div class="caixa">
+            <p><a target="_blank" href="./index.html">Transition & Animation</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

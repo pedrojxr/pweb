@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de CSS 18 - Layout Moderno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6A6EEB;        /* Azul violeta */
+            --primary-dark: #4F52D4;         /* Azul violeta mais escuro */
+            --background-light: #F4F6F9;     /* Cinza muito claro */
+            --background-dark: #E2E6EC;      /* Cinza claro para elementos */
+            --text-color: #343A40;           /* Cinza escuro para texto principal */
+            --border-color: #DCDFE3;         /* Cinza para bordas sutis */
+            --shadow-light: rgba(0, 0, 0, 0.08); /* Sombra mais visível e suave */
+            --shadow-medium: rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte */
+            --accent-light: #E0E4FC;         /* Um tom mais claro da cor primária para hover */
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px; /* Mais padding superior/inferior para respiro */
+            background-color: var(--background-light);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            min-height: 100vh;
+            line-height: 1.6;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Evita scroll horizontal em pequenas telas */
+        }
+
+        h1 {
+            color: var(--primary-dark); 
+            text-align: center;
+            margin-bottom: 50px; 
+            font-size: 3.2em; 
+            font-weight: 700;
+            letter-spacing: -0.02em; 
+            text-shadow: 2px 2px 5px var(--shadow-light);
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 35px; 
+            width: 100%;
+            max-width: 900px; 
+            padding: 40px; 
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-bottom: 8px solid var(--primary-color); 
+            border-radius: 20px; 
+            box-shadow: 0 15px 40px var(--shadow-medium); 
+            transition: all 0.4s ease-in-out; 
+            position: relative; 
+            overflow: hidden;
+        }
+
+        .links-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom right, var(--accent-light) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 0;
+        }
+
+        .links-container:hover::before {
+            opacity: 0.1; 
+        }
+
+        .caixa {
+            flex-basis: calc(50% - 35px);
+            min-width: 250px;
+            padding: 30px; 
+            background-color: var(--background-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow-light); 
+            position: relative; 
+            z-index: 1;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caixa:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-8px) scale(1.02); 
+            box-shadow: 0 15px 30px var(--shadow-medium); 
+            border-color: var(--primary-dark);
+        }
+
+        .caixa p {
+            margin: 0;
+            font-size: 1.4em; 
+            font-weight: 600;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .caixa:hover p {
+            color: #ffffff;
+        }
+
+        .caixa a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            transition: color 0.3s ease;
+            display: block; 
+            padding: 0; 
+        }
+
+        .caixa:hover a {
+            color: #ffffff;
+        }
+
+        @media (max-width: 992px) {
+            .links-container {
+                max-width: 700px;
+                gap: 25px;
+            }
+            .caixa {
+                flex-basis: calc(50% - 25px); 
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 40px;
+            }
+            .links-container {
+                max-width: 500px;
+                padding: 30px;
+                border-radius: 15px;
+            }
+            .caixa {
+                flex-basis: 100%;
+                padding: 20px;
+                min-width: unset; 
+            }
+            .links-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+            body {
+                padding: 20px 15px;
+            }
+            .links-container {
+                padding: 20px;
+            }
+            .caixa {
+                padding: 18px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Atividade de CSS 18</h1>
+
+    <div class="links-container">
+        <div class="caixa">
+            <p><a target="_blank" href="./index.html">Formulário</a></p>
+        </div>
+
+        <div class="caixa">
+            <p><a target="_blank" href="tabelas.html">Tabela</a></p>
+        </div>
+        
+    </div>
+
+</body>
+</html>

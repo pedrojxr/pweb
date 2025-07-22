@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <title>JM Viagens - Página principal</title>
+
+</head>
+
+<body>
+
+    <table width="900" align="center">
+
+        <tr>
+            <td> <img src="imagens/logo.png" /> </td>
+            <td align="right">
+                <a href="index.html">Home</a> |
+                <a href="quem-somos.html">Quem somos</a> |
+                <a href="contato.html">Contato</a> |
+                <a href="destinos.html">Destinos</a> |
+                <a href="buscarPacotes.html">Buscar Pacotes</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Buscar Pacotes de Viagens</h3>
+                <form>
+                    <strong>Origem:</strong> <br>
+                    <select name="estados">
+                        <option value=" " selected>--Escolha--</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantis</option>
+                    </select> <br> <br>
+                    <strong>Destino:</strong> <br>
+                    <select name="cidades">
+                        <option value=" " selected>--Escolha--</option>
+                        <option value="Teresina">Teresina-PI</option>
+                        <option value="Brasília">Brasília-DF</option>
+                        <option value="São Paulo">São Paulo-SP</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro-RJ</option>
+                        <option value="Belo Horizonte">Belo Horizonte-MG</option>
+                        <option value="Curitiba">Curitiba-PR</option>
+                        <option value="Fortaleza">Fortaleza-CE</option>
+                        <option value="Porto de Galinhas">Porto de Galinhas-PE</option>
+                    </select> <br> <br>
+                    <strong>Data de Partida:</strong> <br>
+                    <input type="date" name="data_partida"> <br> <br>
+                    <strong>Data de Retorno:</strong> <br>
+                    <input type="date" name="data_retorno"> <br> <br>
+                    <strong>Quantidade de Quartos:</strong> <br>
+                    <input type="number" name="quartos" value="1" min="1" max="10"> <br> <br>
+                    <strong>Quantidade de adultos:</strong> <br>
+                    <input type="number" name="adulto" value="1" min="1" max="20"> <br> <br>
+                    <strong>Quantidade de crianças:</strong> <br>
+                    <input type="number" name="crianca" value="0" min="0" max="20"> <br> <br>
+                    <input type="button" value="Buscar Pacote">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <h4>Todos os direitos reservados</h4>
+            </td>
+        </tr>
+
+
+    </table>
+
+</body>
+
+</html>

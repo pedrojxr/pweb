@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Bootstrap Grid</title>
+
+    <link href="./bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa; 
+        }
+
+        .gallery-container {
+            background-color: #ffffff; 
+            border: 1px solid #dee2e6; 
+            padding: 20px; 
+            margin-top: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+
+        .gallery-item {
+            margin-bottom: 15px; 
+            overflow: hidden; 
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+        }
+
+        .gallery-item img {
+            display: block; 
+            width: 100%; 
+            height: auto;
+            /* height: 200px;
+            object-fit: cover; */
+        }
+
+        .large-image-column img {
+            height: 100%; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container gallery-container">
+        <h2 class="mb-4 text-center">Galeria de Imagens</h2>
+
+        <div class="row">
+            <div class="col-md-7 large-image-column">
+                <div class="gallery-item">
+                    <img src="./img/cat11.png" class="img-fluid" alt="Gato Principal">
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="gallery-item">
+                            <img src="./img/cat2.png" class="img-fluid" alt="Gato Topo Direita">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="gallery-item">
+                            <img src="./img/dog1.png" class="img-fluid" alt="Cachorro Meio Direita 1">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="gallery-item">
+                            <img src="./img/dog2.png" class="img-fluid" alt="Cachorro Meio Direita 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="gallery-item">
+                            <img src="./img/dog3.png" class="img-fluid" alt="Cachorro Inferior Direita 1">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="gallery-item">
+                            <img src="./img/dog4.png" class="img-fluid" alt="Cachorro Inferior Direita 2">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="gallery-item">
+                            <img src="./img/cat5.png" class="img-fluid" alt="Gato Inferior Direita 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

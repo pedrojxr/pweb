@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; 
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            min-height: 100vh; 
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .links-container {
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+            width: 100%;
+            max-width: 400px; 
+            padding: 20px;
+            background-color: #ffffff; 
+            border: 1px solid #ddd; 
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        .caixa {
+            padding: 15px;
+            background-color: #e9e9e9; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            text-align: center;
+        }
+
+        .caixa p {
+            margin: 0; 
+            font-size: 1.1em;
+        }
+
+        .caixa a {
+            text-decoration: none;
+            color: #007bff; 
+            font-weight: bold; 
+        }
+
+        .caixa a:hover {
+            text-decoration: underline; 
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Layouts CSS</h1>
+
+    <div class="links-container">
+        <div id="fixo-link-header" class="caixa">
+            <p><a target="_blank" href="./container.html">container</a></p>
+        </div>
+
+        <div id="fixo-link-sidebar" class="caixa">
+            <p><a target="_blank" href="./index.html">Index</a></p>
+        </div>
+
+        <div id="fixo-link-sidebar" class="caixa">
+            <p><a target="_blank" href="./image1.html">Imagem01</a></p>
+        </div>
+
+        <div id="fixo-link-sidebar" class="caixa">
+            <p><a target="_blank" href="./image2.html">Imagem02</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

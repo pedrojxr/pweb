@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>FixarSideBar</title>
+
+    <style type="text/css">
+
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 25px;
+            position: absolute;
+            top: 50%; 
+            left: 10%; 
+            transform: translate(-50%, -50%); 
+            width: 100%; 
+        }
+        
+        #mainMenu {
+            background: rgba(255, 0, 0, 0.655);
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 100%;
+            height: 6%;
+            text-align: center;
+            z-index: 100;
+        }
+
+        #header {
+            background: rgba(0, 0, 255, 0.645);
+            position: absolute;
+            left: 0%;
+            top: 6%;
+            width: 100%;
+            height: 19%;
+            text-align: center;
+            z-index: 1;
+        }
+
+        #content {
+            background: rgba(172, 255, 47, 0.675);
+            position: absolute;
+            left: 0%;
+            top: 25%;
+            width: 60%;
+            height: 68%;
+            text-align: center;
+        }
+
+        #sideBar {
+            background: rgba(0, 128, 0, 0.681);
+            position: fixed;
+            left: 60%;
+            top: 25%;
+            width: 40%;
+            height: 68%;
+            text-align: center;
+            z-index: 100;
+        }
+       
+        #footer {
+            background: rgba(233, 148, 36, 0.775);
+            position: absolute;
+            left: 0%;
+            top: 93%;
+            width: 100%;
+            height: 7%;
+            text-align: center;
+        }
+       
+    </style>
+
+</head>
+<body>
+    
+    <div id="mainMenu">
+        <h1>Main Menu</h1>
+    </div>
+
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+
+    <div id="left">
+        <h1>Left</h1>
+    </div>
+
+    <div id="content">
+        <h1>Content</h1>
+    </div>
+
+    <div id="sideBar">
+        <h1>Side Bar</h1>
+    </div>
+
+    <div id="footer">
+        <h1>Footer</h1>
+    </div>
+
+
+</body>
+</html>

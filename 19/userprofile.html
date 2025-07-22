@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para centralizar o card, se desejar */
+        body {
+            background-color: #f8f9fa; /* Cor de fundo leve */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .user-profile-card {
+            width: 100%;
+            max-width: 300px; /* Largura máxima do card */
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%; /* Para imagem circular */
+            margin: 0 auto 15px auto; /* Centralizar e adicionar espaçamento */
+            display: block; /* Para que margin: auto funcione */
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .info-label {
+            font-weight: bold;
+        }
+        /* Ajuste para a cor dos números (seguidores, seguindo, amigos) */
+        .text-primary {
+            color: #007bff !important; /* Cor padrão do Bootstrap primary */
+        }
+        /* Ajuste para o botão (opcional, se quiser uma cor exatamente igual à imagem 2) */
+        .btn-primary {
+            background-color: #007bff; /* Cor padrão do Bootstrap primary */
+            border-color: #007bff;     /* Cor padrão do Bootstrap primary */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card user-profile-card text-center shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">User Profile</h5>
+                        <img src="./img/antony.png" class="profile-image mb-3" alt="Profile Picture of Antony">
+                        
+                        <h4 class="mb-1">Nina Mcintire</h4>
+                        <p class="text-muted mb-4">Software Engineer</p>
+
+                        <div class="info-section text-left mb-4">
+                            <div class="info-item">
+                                <span class="info-label">Followers</span>
+                                <span class="text-primary">1,322</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Following</span>
+                                <span class="text-primary">543</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Friends</span>
+                                <span class="text-primary">13,287</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

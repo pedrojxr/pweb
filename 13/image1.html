@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffffff; /* Fundo branco como na imagem original */
+            gap: 50px; /* Espaço entre as duas formas */
+        }
+
+        /* Estilos para a forma da Direita (Círculo Quadrado) - MANTIDO */
+        .container-circulo {
+            width: 200px; /* Diâmetro do círculo */
+            height: 200px; /* Diâmetro do círculo */
+            position: relative;
+            border-radius: 50%; /* Torna o container um círculo */
+            overflow: hidden; /* Garante que os quadrantes fiquem dentro do círculo */
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); /* Pequena borda para definir, se a imagem a tiver */
+        }
+
+        .quadrante-circulo {
+            width: 100px; /* Metade da largura do container */
+            height: 100px; /* Metade da altura do container */
+            position: absolute;
+        }
+
+        .quadrante-circulo.superior-esquerdo {
+            top: 0;
+            left: 0;
+            background-color: #E44D26; /* Vermelho */
+        }
+
+        .quadrante-circulo.superior-direito {
+            top: 0;
+            left: 100px;
+            background-color: #F7B420; /* Laranja */
+        }
+
+        .quadrante-circulo.inferior-esquerdo {
+            top: 100px;
+            left: 0;
+            background-color: #5CB85C; /* Verde */
+        }
+
+        .quadrante-circulo.inferior-direito {
+            top: 100px;
+            left: 100px;
+            background-color: #6A0DAD; /* Roxo */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-circulo">
+        <div class="quadrante-circulo superior-esquerdo"></div>
+        <div class="quadrante-circulo superior-direito"></div>
+        <div class="quadrante-circulo inferior-esquerdo"></div>
+        <div class="quadrante-circulo inferior-direito"></div>
+    </div>
+</body>
+</html>

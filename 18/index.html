@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="./bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="form-section cadastro">
+            <h1>Cadastre-se</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email_cadastro">E-mail</label> <input type="email" class="form-control" id="email_cadastro">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha_cadastro">Senha</label> <input type="password" class="form-control" id="senha_cadastro">
+                </div>
+
+                <div class="checkbox">
+                    <label for="termos">
+                        <input type="checkbox" id="termos"> Aceito os termos do serviço.
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label for="php">
+                        <input type="radio" name="opcoes" id="php"> PHP
+                    </label>
+                    <label for="java">
+                        <input type="radio" name="opcoes" id="java"> Java
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-default">Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="form-section login">
+            <h3>Logar</h3>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email_login" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="senha_login" placeholder="Digite sua senha">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Logar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

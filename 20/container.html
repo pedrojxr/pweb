@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades de CSS 18 - Layout Minimalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --primary-dark: #0056b3;
+            --background-light: #F8F9FA;
+            --background-dark: #E9ECEF;
+            --text-color: #343A40;
+            --border-color: #DEE2E6;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --accent-light: #CCEEFF;
+            --secondary-color: #28A745;
+            --secondary-dark: #1E7E34;
+            --button-text-color: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--background-light);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            color: var(--primary-dark);
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3.2em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-shadow: 2px 2px 5px var(--shadow-light);
+            background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+            padding: 35px;
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px var(--shadow-medium);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .links-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top left, var(--primary-color) 0%, transparent 40%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 0;
+        }
+
+        .links-container:hover::before {
+            opacity: 0.05;
+        }
+
+        .caixa {
+            flex-basis: calc(50% - 30px);
+            min-width: 280px;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: none;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .caixa a.button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--text-color);
+            background-color: var(--background-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .caixa a.button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            z-index: 0;
+        }
+
+        .caixa a.button:hover::before {
+            transform: translateX(100%);
+        }
+
+        .caixa a.button:hover {
+            background-color: var(--primary-color);
+            color: var(--button-text-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px var(--shadow-medium);
+            border-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+                margin-bottom: 40px;
+            }
+            .links-container {
+                max-width: 500px;
+                padding: 25px;
+                flex-direction: column;
+            }
+            .caixa {
+                flex-basis: 100%;
+                min-width: unset;
+            }
+            .caixa a.button {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+            body {
+                padding: 20px 15px;
+            }
+            .links-container {
+                padding: 20px;
+            }
+            .caixa a.button {
+                padding: 18px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Atividade de CSS 20</h1>
+
+    <div class="links-container">
+        <div class="caixa">
+            <a target="_blank" href="index.html" class="button">index</a>
+        </div>
+
+        <div class="caixa">
+            <a target="_blank" href="janelaModal.html" class="button">Janela Modal</a>
+        </div>
+        
+    </div>
+
+</body>
+</html>

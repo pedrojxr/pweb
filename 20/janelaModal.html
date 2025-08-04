@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janela Modal</title>
+    <link href="./bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+
+    <style>
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .social-btn.facebook {
+            background-color: #3b5998;
+        }
+        .social-btn.google {
+            background-color: #dd4b39;
+        }
+        .social-btn img {
+            margin-right: 10px;
+        }
+        .or-separator {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .or-separator::before,
+        .or-separator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background-color: #ccc;
+        }
+        .or-separator::before {
+            left: 0;
+        }
+        .or-separator::after {
+            right: 0;
+        }
+        .or-separator span {
+            background-color: white;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+            color: #555;
+        }
+        .input-group-text img {
+            width: 20px; 
+            height: 20px; 
+            vertical-align: middle; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#janela">
+            Logar
+        </button>
+
+        <div class="modal fade" id="janela" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center w-100"  id="modalLoginLabel" >Sign in to start your session</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3 input-group">
+                                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                                <span class="input-group-text">
+                                    <img src="./img/carta05.png" alt="Ícone de Email">
+                                </span>
+                            </div>
+                            <div class="mb-3 input-group">
+                                <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+                                <span class="input-group-text">
+                                    <img src="./img/cadeado.png" alt="Ícone de Cadeado">
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember Me
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </div>
+                        </form>
+                        <div class="or-separator">
+                            <span>- OR -</span>
+                        </div>
+                        <a href="#" class="social-btn facebook">
+                            <img src="./img/face02.png" alt="Logo Facebook" style="width: 24px; height: 24px;"> Sign in using Facebook
+                        </a>
+                        <a href="#" class="social-btn google">
+                            <img src="./img/google.png" alt="Logo Google+" style="width: 24px; height: 24px;"> Sign in using Google+
+                        </a>
+                        <div class="text-center mt-3">
+                            <a href="#" class="d-block">I forgot my password</a>
+                            <a href="#" class="d-block">Register a new membership</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Array</title>
+    <script>
+        let linguagens = Array();
+        
+        linguagens[0] = 'Dart';
+        linguagens[1] = 'PHP';
+        linguagens[2] = 'Java';
+        linguagens[3] = 'Python';
+        linguagens[4] = 'Perl';
+        linguagens[5] = 'ruby on Rails';
+        linguagens[6] = 'C++';
+        
+        function mostrarListaLinguagens(){
+            const container = document.getElementById('linguagensDiv');
+
+            container.innerHTML = ''; 
+
+            for (var i = 0; i < linguagens.length; i++){
+                var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+                container.innerHTML += tag;
+            }
+        }
+
+        function posicãoLinguagens(){
+            var indice = prompt('Qual posição da lista de linguagens deseja consultar?');
+            if (indice !== null && !isNaN(indice) && indice >= 0 && indice < linguagens.length) {
+                alert(linguagens[indice]);
+            } else {
+                alert('Índice inválido ou fora do limite.');
+            }
+        }
+
+        let listaPessoas = [];
+
+        function adicionarPessoa() {
+            let nome = prompt("Digite o nome da pessoa para adicionar:");
+            if (nome) {
+                listaPessoas.push(nome);
+                atualizarListaPessoas();
+            }
+        }
+
+        function removerUltimaPessoa() {
+            if (listaPessoas.length > 0) {
+                let pessoaRemovida = listaPessoas.pop();
+                alert("Pessoa removida: " + pessoaRemovida);
+                atualizarListaPessoas();
+            } else {
+                alert("A lista de pessoas está vazia!");
+            }
+        }
+
+        function atualizarListaPessoas() {
+            const container = document.getElementById('pessoasDiv');
+            container.innerHTML = '';
+
+            if (listaPessoas.length === 0) {
+                container.innerHTML = '<h5>Nenhuma pessoa na lista.</h5>';
+                return;
+            }
+
+            for (let i = 0; i < listaPessoas.length; i++) {
+                let tag = '<h5>' + i + ' - ' + listaPessoas[i] + '</h5>';
+                container.innerHTML += tag;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Array de Linguagens</h1>
+    <button onclick="mostrarListaLinguagens()">Mostrar Lista de Linguagens</button><br><br>
+    <button onclick="posicãoLinguagens()">Consultar Posição na Lista de Linguagens</button>
+    <div id="linguagensDiv"></div>
+
+    <hr>
+
+    <h1>Gerenciando uma Lista de Pessoas</h1>
+    <button onclick="adicionarPessoa()">Adicionar Pessoa</button><br><br>
+    <button onclick="removerUltimaPessoa()">Remover Última Pessoa</button><br><br>
+    <div id="pessoasDiv"></div>
+
+    <script>
+        atualizarListaPessoas(); 
+    </script>
+</body>
+</html>

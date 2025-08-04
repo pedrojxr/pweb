@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 22 - Exercícios Javascript 01</title>
+    <script type="text/javascript">
+        function escreve(arg){
+            document.write(arg);
+        }
+
+        function minhafuncao(arg){
+            alert(arg);
+        }
+
+        function minhafuncao2(arg1, arg2){
+            var soma = arg1 + arg2;
+            var msg = 'A soma é igual a ';
+            alert(msg + soma);
+        }
+
+        function escreveDiv(texto){
+            document.getElementById("minhaDiv").innerHTML = texto;
+        }
+
+        function escreveDiv2(){
+            texto = prompt('Digite um texto qualquer');
+            document.getElementById("minhaDiv2").innerHTML = texto;
+        }
+
+        function calculaRaiz(arg){
+            var raiz = Math.sqrt(arg);
+            alert("A raiz quadrada de " + arg + " é " + raiz);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Raiz Quadrada</h1>
+    <button onclick="calculaRaiz(25)">Raiz de 25</button>
+    <button onclick="calculaRaiz(36)">Raiz de 36</button>
+    <button onclick="calculaRaiz(49)">Raiz de 49</button>
+
+    <hr>
+
+    <h1>Escrevendo na Div</h1>
+    <button onclick="escreveDiv('<h1>Programação Web</h1>')">Escrever</button>
+    <div id="minhaDiv"></div>
+
+    <hr>
+
+    <h1>Escrevendo Texto Dinâmico</h1>
+    <button onclick="escreveDiv2()">Escrever</button>
+    <div id="minhaDiv2"></div>
+
+    </body>
+</html>
